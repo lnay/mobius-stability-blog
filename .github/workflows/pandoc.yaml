@@ -8,7 +8,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - uses: docker://pandoc/latex:2.9
+      - uses: docker://pandoc/latex:latest
         with:
           args: --mathml --output=output/index.html README.md
 
