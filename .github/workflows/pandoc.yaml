@@ -8,6 +8,8 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+      - run: mkdir output
+
       - uses: docker://pandoc/latex:latest
         with:
           args: --mathml --output=output/index.html README.md
