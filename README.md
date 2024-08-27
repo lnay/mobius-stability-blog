@@ -19,7 +19,6 @@ header-includes: |
 # Mobius transforms on Bridgeland stability conditions
 
 
-
 ## Copy of proof (not self contained, to be changed)
 
 This is a copy of the proof from my thesis for the underlying theorem in the above about the autoequivalences
