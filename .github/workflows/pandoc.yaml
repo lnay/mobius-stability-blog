@@ -1,5 +1,4 @@
 name: Pandoc
-
 on: push
 
 jobs:
