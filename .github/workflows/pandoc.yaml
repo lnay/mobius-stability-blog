@@ -4,11 +4,14 @@ on: push
 jobs:
   deploy:
     runs-on: ubuntu-22.04
+
     permissions:
       pages: write
       id-token: write
+
     concurrency:
       group: ${{ github.workflow }}-${{ github.ref }}
+
     steps:
       - uses: actions/checkout@v3
 
