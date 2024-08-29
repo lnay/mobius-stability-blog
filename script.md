@@ -1,7 +1,7 @@
 
 # Intro
 Hello everybody, for those who don't know me, I'm a final year PhD student here in Edinburgh uni.
-In fact I just submitted my thesis two weeks ago! *applause* **stop**
+In fact I just submitted my thesis two weeks ago!
 My area of research is walls for Bridgeland stability conditions. This is an area of algebraic geometry
 that has the attention of a fair amount of people here.
 Briefly, as part of the wider movement in algebraic geometry to studying the derived category of coherent sheaves
