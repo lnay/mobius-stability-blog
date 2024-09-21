@@ -1,0 +1,48 @@
+\documentclass[]{article}
+\usepackage{projpreamble}
+\input{newcommands}
+\newcommand{\gltworplustilde}{\widetilde{\mathrm{GL}}(2,\RR)}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+\section{Heading}
+aoeuoaeu
+
+\section{Main statements}
+
+\begin{theorem}
+	There is a group action:
+	\[
+		\aut\left(\triangcat\right)^{\mathrm{num}}
+		\circlearrowright
+		\frac{
+			\stab^{\mathrm{num}}(\triangcat)
+		}{
+			\gltworplustilde^+
+		}.
+	\]
+	\noindent
+	In the case of a principally polarised abelian surface, descends to:
+	\[
+		\PSL(2, \ZZ)
+		\circlearrowright
+		\left\{
+		\left[\sigma_{\alpha, \beta}\right]
+		\colon
+		\alpha \in \RR_{>0}, \beta \in \RR
+		\right\}
+		\cong
+		\left\{
+		z \in \CC
+		\colon
+		\mathfrak{Im}(z) > 0
+		\right\},
+	\]
+	coinciding with the standard action of
+	the ``modular group'' $\PSL(2, \ZZ)$
+	on the upper half-plane via Möbius transformations.
+\end{theorem}
+
+\end{document}
