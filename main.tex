@@ -3,7 +3,10 @@
 \input{newcommands}
 \newcommand{\gltworplustilde}{\widetilde{\mathrm{GL}}(2,\RR)}
 
+
 \begin{document}
+\Configure{AddCss}{custom.css}
+\Css{div.newtheorem {border-left: red 0.3em solid; padding-left: 1em;}}
 \maketitle
 \tableofcontents
 
@@ -28,12 +31,6 @@ aoeuoaeu
 	\[
 		\PSL(2, \ZZ)
 		\circlearrowright
-		\left\{
-		\left[\sigma_{\alpha, \beta}\right]
-		\colon
-		\alpha \in \RR_{>0}, \beta \in \RR
-		\right\}
-		\cong
 		\left\{
 		z \in \CC
 		\colon
