@@ -4,7 +4,15 @@
       "settings": {
         "texlab": {
           "build": {
-            "args": ["-d", "html", "-u", "main.tex", "\"mathml\""],
+            "args": [
+              "-d",
+              "html",
+              "-u",
+              "main.tex",
+              "\"mathml\"",
+              "-c",
+              "config.cfg"
+            ],
             "executable": "make4ht",
             "onSave": true,
             "forwardSearchAfter": false
