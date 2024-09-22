@@ -5,6 +5,9 @@
 
 
 \begin{document}
+\ConfigureEnv{proof}
+{\HCode{<details class="proof"><summary>Proof</summary>}}
+{\HCode{</details>}}{}{}
 \Configure{AddCss}{custom.css}
 \Css{
 	div.newtheorem {
@@ -16,7 +19,7 @@
 	h1, h2, h3, h4, h5, h6 {
 			font-family: "Libertinus Sans";
 		}
-	p {
+	body {
 			font-family: "Libertinus Serif";
 		}
 	math {
@@ -35,7 +38,7 @@ aoeuoaeu
 	There is a group action:
 	\[
 		\aut\left(\triangcat\right)^{\mathrm{num}}
-		\circlearrowright
+		\HCode{<mo class="MathClass-rel" stretchy="false">⟳</mo>}
 		\frac{
 			\stab^{\mathrm{num}}(\triangcat)
 		}{
@@ -46,7 +49,7 @@ aoeuoaeu
 	In the case of a principally polarised abelian surface, descends to:
 	\[
 		\PSL(2, \ZZ)
-		\circlearrowright
+		\HCode{<mo class="MathClass-rel" stretchy="false">⟳</mo>}
 		\left\{
 		z \in \CC
 		\colon
@@ -57,5 +60,9 @@ aoeuoaeu
 	the ``modular group'' $\PSL(2, \ZZ)$
 	on the upper half-plane via Möbius transformations.
 \end{theorem}
+
+\begin{proof}
+	aoeua aoeu aoeu aoeu
+\end{proof}
 
 \end{document}
