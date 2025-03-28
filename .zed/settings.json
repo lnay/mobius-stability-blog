@@ -21,5 +21,8 @@
         }
       }
     }
+  },
+  "file_types": {
+    "LaTeX": ["cfg"]
   }
 }
