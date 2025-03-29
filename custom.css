@@ -4,6 +4,11 @@ div.newtheorem {
     background-color: rgba(255, 0, 0, 0.1);
     border-radius: 0 1em 0 0;
 }
+div.proof {
+    border-left: black 0.1em dashed;
+    padding-left: 0.7em;
+    color: #444;
+}
 h1,
 h2,
 h3,
