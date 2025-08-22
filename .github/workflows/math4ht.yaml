@@ -1,4 +1,4 @@
-name: Pandoc
+name: Math4ht
 on: push
 
 jobs:
@@ -15,10 +15,10 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - run: mkdir output
+      - run: mkdir html
 
       - name: Run make4ht
-        uses: docker://ghcr.io/michal-h21/make4ht-action:latest
+        uses: docker://registry.gitlab.com/islandoftex/images/texlive:latest
         env:
           command: 'make4ht -d html -u main.tex "mathml" -c config.cfg'
 
