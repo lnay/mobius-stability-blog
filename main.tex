@@ -7,11 +7,25 @@
 \maketitle
 \tableofcontents
 
-\section{Heading}
+\section{Introduction}
+At the end of me typing up my PhD thesis,
+I had a realisation about the whole topic I had been writing about.
+Many of the fundamental concepts in my field, I admittedly only fully grasped near the end of the 4 years.
+In fact, my thesis would be so much shorter if I was tasked now with rewriting it to achieve the same results.
+Although this sounds like me wallowing in my own shortcomings, I would also say that I would have written certain other older key results in a more concise manner with this approach.
+
+The thing is, the key ideas in this post are not even original,
+% TODO cite Kawatani
+however I don't think that are very recognised.
+Here my main plan is to rewrite the story about Bridgeland stability condition walls on a general smooth projective surface (Picard rank 1).
+I have not fully considered the implications for K3 surfaces and threefolds, this is where I pass the baton.
+
+
+\section{Group actions on Bridgeland stability conditions}
+aoeuoaeu
 aoeuoaeu
 
 \section{Main statements}
-
 \begin{theorem}
 	There is a group action:
 	\[
@@ -22,10 +36,36 @@ aoeuoaeu
 			\stab^{\mathrm{num}}(\triangcat)
 		}{
 			\gltworplustilde
-		}.
+		}\cdot
+	\]
+	Furthermore, it still makes sense to talk about walls on the right-hand side,
+	and this group action preserves the set of points on walls, possibly permuting the walls for a given group element.
+\end{theorem}
+\begin{proof}
+	Note that the two natural group actions
+	(from $\aut\left(\triangcat\right)^{\mathrm{num}}$
+	and $\gltworplustilde$)
+	on  $\stab^{\mathrm{num}}(\triangcat)$ commute with
+	each other so that there is an induced action on the
+	quotient as described in the statement of the theorem.
+
+	Since  $\gltworplustilde$ preserves semi-stable objects, and only modifies the central charge, if a stability condition point is on a wall, it is still on a wall after any action by some $g\in\gltworplustilde$.
+\end{proof}
+
+\begin{theorem}
+	The group action:
+	\[
+		\aut\left(\triangcat\right)^{\mathrm{num}}
+		\circlearrowright
+		%\HCode{<mo class="MathClass-rel" stretchy="false">⟳</mo>}
+		\frac{
+			\stab^{\mathrm{num}}(\triangcat)
+		}{
+			\gltworplustilde
+		},
 	\]
 	\noindent
-	In the case of a principally polarised abelian surface, descends to:
+	in the case of a principally polarised abelian surface, descends to:
 	\[
 		\PSL(2, \ZZ)
 		\circlearrowright
@@ -42,22 +82,34 @@ aoeuoaeu
 \end{theorem}
 
 \begin{proof}
-First, note that the two natural group actions
-(from $\aut\left(\triangcat\right)^{\mathrm{num}}$
-and $\gltworplustilde$)
-on  $\stab^{\mathrm{num}}(\triangcat)$ commute with
-each other so that there is an induced action
-\[
-	\aut\left(\triangcat\right)^{\mathrm{num}}
-	\circlearrowright
-	% \HCode{<mo class="MathClass-rel" stretchy="false">⟳</mo>}
-	\frac{
-		\stab^{\mathrm{num}}(\triangcat)
-	}{
-		\gltworplustilde
-	}.
-\]
-
+	For now, refer to Section 2.4 from my thesis: \url{https://era.ed.ac.uk/handle/1842/43553}.
 \end{proof}
+
+\begin{figure}
+	\includesvg{fmt-action.svg}
+	\caption{caption}
+\end{figure}
+
+\begin{example}[Standard Fourier-Mukai Transform]
+	Consider the standard Fourier-Mukai transform on a general principally polarised abelian surface, using the Picard bundle\footnote{This is the transform which takes flat line bundles to skyscraper sheaves shifted twice.}.
+	The corresponding element of $\PSL(2, \ZZ)$ is
+	\(
+	\left[
+		\begin{pmatrix}
+			0  & 1 \\
+			-1 & 0
+		\end{pmatrix}
+		\right]
+	\),
+	which corresponds to the Möbius transformation
+	\(
+	z \mapsto -\frac{1}{z}
+	\).
+
+\end{example}
+
+\section{Bertram's Nested Walls}
+
+
 
 \end{document}
