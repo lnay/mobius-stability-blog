@@ -17,16 +17,17 @@ jobs:
 
       - run: mkdir output
 
-      - uses: docker://pandoc/latex:latest
-        with:
-          args: --mathml --output=output/index.html README.md
+      - name: Run make4ht
+        uses: docker://ghcr.io/michal-h21/make4ht-action:latest
+        env:
+          command: 'make4ht -d html -u main.tex "mathml" -c config.cfg'
 
       - uses: actions/upload-artifact@v4
         with:
-          name: output
-          path: output
+          name: html
+          path: html
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
         with:
-          artifact_name: output
+          artifact_name: html
