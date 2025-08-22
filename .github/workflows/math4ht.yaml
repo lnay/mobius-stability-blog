@@ -1,4 +1,4 @@
-name: Pandoc
+name: Math4ht
 on: push
 
 jobs:
@@ -15,18 +15,21 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - run: mkdir output
+      - run: mkdir html
 
-      - uses: docker://pandoc/latex:latest
+      - name: Run make4ht
+        uses: xu-cheng/texlive-action@v3
         with:
-          args: --mathml --output=output/index.html README.md
+          texlive_version: 2024
+          run: |
+            make4ht -d html -u main.tex "mathml" -c config.cfg
 
       - uses: actions/upload-artifact@v4
         with:
-          name: output
-          path: output
+          name: html
+          path: html/
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
         with:
-          artifact_name: output
+          artifact_name: html
