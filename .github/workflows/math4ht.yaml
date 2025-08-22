@@ -19,8 +19,8 @@ jobs:
 
       - name: Run make4ht
         uses: docker://registry.gitlab.com/islandoftex/images/texlive:TL2024-historic
-        env:
-          command: 'make4ht -d html -u main.tex "mathml" -c config.cfg'
+        with:
+          run: 'make4ht -d html -u main.tex "mathml" -c config.cfg'
 
       - uses: actions/upload-artifact@v4
         with:
