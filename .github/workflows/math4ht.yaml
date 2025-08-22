@@ -18,14 +18,14 @@ jobs:
       - run: mkdir html
 
       - name: Run make4ht
-        uses: docker://registry.gitlab.com/islandoftex/images/texlive:latest
+        uses: docker://registry.gitlab.com/islandoftex/images/texlive:TL2024-historic
         env:
           command: 'make4ht -d html -u main.tex "mathml" -c config.cfg'
 
       - uses: actions/upload-artifact@v4
         with:
           name: html
-          path: html
+          path: html/
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
