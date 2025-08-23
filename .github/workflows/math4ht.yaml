@@ -20,7 +20,7 @@ jobs:
       - name: Run make4ht
         uses: xu-cheng/texlive-action@v3
         with:
-          texlive_version: 2024
+          texlive_version: 2023
           run: |
             make4ht -d html -u main.tex "mathml" -c config.cfg
 
