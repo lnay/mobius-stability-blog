@@ -30,10 +30,6 @@ jobs:
         with:
           path: html/
 
-      - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v4
-        with:
-          artifact_name: html
   # Deployment job
   deploy:
     environment:
